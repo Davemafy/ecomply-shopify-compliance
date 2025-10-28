@@ -22,6 +22,7 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --tracking-normal: 0em;
+    --leading-normal: 1.5;
     --radius-4xl: 2rem;
     --aspect-video: 16 / 9;
     --default-font-family: var(--font-sans);
@@ -214,8 +215,20 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-2\.5 {
+    margin-top: calc(var(--spacing) * 2.5);
+  }
   .mt-5\.5 {
     margin-top: calc(var(--spacing) * 5.5);
+  }
+  .mt-8\.75 {
+    margin-top: calc(var(--spacing) * 8.75);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mb-12\.5 {
+    margin-bottom: calc(var(--spacing) * 12.5);
   }
   .mb-\[50px\] {
     margin-bottom: 50px;
@@ -226,8 +239,14 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
+  }
+  .inline-flex {
+    display: inline-flex;
   }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
@@ -262,17 +281,32 @@
   .max-w-24 {
     max-width: calc(var(--spacing) * 24);
   }
+  .max-w-80 {
+    max-width: calc(var(--spacing) * 80);
+  }
   .max-w-297\.75 {
     max-width: calc(var(--spacing) * 297.75);
   }
   .max-w-\[17ch\] {
     max-width: 17ch;
   }
+  .max-w-\[50\%\] {
+    max-width: 50%;
+  }
   .max-w-\[89\%\] {
     max-width: 89%;
   }
   .min-w-\[7\.443375rem\] {
     min-width: 7.443375rem;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .grid-flow-row {
+    grid-auto-flow: row;
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -319,6 +353,9 @@
   .rounded-\[1\.25rem\] {
     border-radius: 1.25rem;
   }
+  .rounded-\[1\.875rem\] {
+    border-radius: 1.875rem;
+  }
   .rounded-\[20px\] {
     border-radius: 20px;
   }
@@ -328,6 +365,9 @@
   }
   .border-\[\#d9d9d9\] {
     border-color: #d9d9d9;
+  }
+  .bg-\[\#f5f6f7\] {
+    background-color: #f5f6f7;
   }
   .bg-accent {
     background-color: var(--color-accent);
@@ -361,6 +401,9 @@
   }
   .py-3\.25 {
     padding-block: calc(var(--spacing) * 3.25);
+  }
+  .py-3\.75 {
+    padding-block: calc(var(--spacing) * 3.75);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -417,8 +460,8 @@
   .text-\[clamp\(0\.5rem\,5vw\+0\.5rem\,2\.5rem\)\] {
     font-size: clamp(0.5rem, 5vw + 0.5rem, 2.5rem);
   }
-  .text-\[clamp\(1rem\,4vw\+1rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 4vw + 1rem, 3.5rem);
+  .text-\[clamp\(1rem\,4vw\+1rem\,4rem\)\] {
+    font-size: clamp(1rem, 4vw + 1rem, 4rem);
   }
   .leading-4\.5 {
     --tw-leading: calc(var(--spacing) * 4.5);
@@ -432,9 +475,9 @@
     --tw-leading: calc(var(--spacing) * 12);
     line-height: calc(var(--spacing) * 12);
   }
-  .leading-16 {
-    --tw-leading: calc(var(--spacing) * 16);
-    line-height: calc(var(--spacing) * 16);
+  .leading-\[2\.4rem\] {
+    --tw-leading: 2.4rem;
+    line-height: 2.4rem;
   }
   .leading-\[38\.4px\] {
     --tw-leading: 38.4px;
@@ -443,6 +486,10 @@
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .leading-normal {
+    --tw-leading: var(--leading-normal);
+    line-height: var(--leading-normal);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -459,6 +506,9 @@
   .tracking-normal {
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
+  }
+  .text-accent {
+    color: var(--color-accent);
   }
   .text-dim {
     color: var(--color-dim);
@@ -495,6 +545,11 @@
       max-width: 17ch;
     }
   }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .sm\:text-lg {
     @media (width >= 40rem) {
       font-size: var(--text-lg);
@@ -504,6 +559,12 @@
   .sm\:text-\[clamp\(1rem\,4vw\+1\.6rem-0\.24px\,7rem\)\] {
     @media (width >= 40rem) {
       font-size: clamp(1rem, 4vw + 1.6rem - 0.24px, 7rem);
+    }
+  }
+  .sm\:leading-16 {
+    @media (width >= 40rem) {
+      --tw-leading: calc(var(--spacing) * 16);
+      line-height: calc(var(--spacing) * 16);
     }
   }
   .md\:flex {
@@ -600,10 +661,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h2, h3, h4, h5, h6 {
-  color: inherit;
-  font-family: inherit;
-  line-height: 1.2;
+h2 {
   margin-block-end: 1rem;
   margin-block-start: 0.5rem;
 }
@@ -662,13 +720,23 @@ button.active {
   color: var(--color-white);
 }
 .inner {
-  width: min(100%,1191px);
+  width: min(100%, 1191px);
   margin-inline: auto;
 }
 @media (width <= 64rem) {
   .inner {
     padding-inline: 1rem;
   }
+}
+#catalouge article {
+  text-align: left;
+  background-color: var(--color-accent);
+  background-image: url("assets/BG-Card-1.png");
+  padding: 60px 30px 60px 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 20px 20px;
 }
 @property --tw-border-style {
   syntax: "*";

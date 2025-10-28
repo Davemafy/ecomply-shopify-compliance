@@ -44,7 +44,8 @@
   font-weight: 200 800;
   font-stretch: 100%;
   font-display: swap;
-  src: url("./assets/bricolage2.woff2") format("woff2");t-family: "Bricolage Thin";
+  src: url("./assets/bricolage2.woff2") format("woff2");
+  t-family: "Bricolage Thin";
   font-style: normal;
   font-weight: 200 800;
   font-stretch: 100%;
@@ -58,8 +59,8 @@
   font-weight: 200 800;
   font-stretch: 100%;
   font-display: swap;
-  src: url("./assets/bricolage2.woff2") format("woff2");}
-
+  src: url("./assets/bricolage2.woff2") format("woff2");
+}
 
 @theme {
   --color-dim: #575757; /* Tomato */
@@ -97,14 +98,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: inherit;
-  font-family: inherit;
-  line-height: 1.2;
+h2 {
   margin-block-end: 1rem;
   margin-block-start: 0.5rem;
 }
@@ -177,12 +171,23 @@ button.active {
 }
 
 .inner {
-  width: min(100%,1191px);
-  margin-inline: auto;  
+  width: min(100%, 1191px);
+  margin-inline: auto;
 }
 
-@media (width <= 64rem) { 
+@media (width <= 64rem) {
   .inner {
     padding-inline: 1rem;
   }
- }
+}
+
+#catalouge article {
+  text-align: left;
+  background-color: var(--color-accent);
+  background-image: url("assets/BG-Card-1.png");
+  padding: 60px 30px 60px 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 20px 20px;
+}
