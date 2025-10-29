@@ -84,7 +84,7 @@
 .icon.icon-burger-menu::before {
   content: "\eab8";
   font-size: min(9vw, 2rem);
-  color: var(--color-accent)
+  color: var(--color-accent);
 }
 
 @theme {
@@ -199,7 +199,7 @@ button.active {
 
 @media (width <= 64rem) {
   .inner {
-    padding-inline: 1rem;
+    padding-inline: clamp(1rem, 4vw, 3rem);
   }
 }
 
@@ -212,4 +212,24 @@ button.active {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px 20px 20px 20px;
+}
+
+.bg-card-3 {
+  background-color: rgb(245, 246, 247);
+  background-image: url("./assets/Bg-Card-3.png");
+  padding: 35px 35px 35px 35px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#finance .text-box ,
+#corporate .text-box {
+  flex: 1;
+}
+
+#finance figure,
+#corporate figure {
+  flex: 0.5875;
 }
