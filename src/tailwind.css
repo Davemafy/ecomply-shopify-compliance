@@ -62,6 +62,31 @@
   src: url("./assets/bricolage2.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: elementskit;
+  src: url("./assets/elementskit.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.icon::before {
+  font-family: elementskit !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon.icon-burger-menu::before {
+  content: "\eab8";
+  font-size: min(9vw, 2rem);
+  color: var(--color-accent)
+}
+
 @theme {
   --color-dim: #575757; /* Tomato */
   --color-seal: #00cea6;
@@ -129,17 +154,14 @@ h2 {
   flex-shrink: 0.575;
 }
 
-.carousel p {
-  width: min(100%, 17.1ch);
-}
-
 .img-wrapper {
   flex-shrink: 0.5;
+  min-width: 250px;
 }
 
 .review {
   position: absolute;
-  top: 72.5%;
+  top: calc(100% - 66px);
   left: 50%;
   width: 200px;
   margin-left: -100px;

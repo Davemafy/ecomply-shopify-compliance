@@ -8,17 +8,20 @@
   </head>
   <body class="font-base h-[200vh]">
     <div id="page">
-      <header class="relative z-99 px-10 lg:px-20 flex items-center">
+      <header class="relative z-99 p-6 sm:px-10 lg:px-20 flex items-center">
         <div
-          class="container mx-auto py-8 flex justify-between gap-5 f-full items-center"
+          class="container mx-auto  sm:py-8 flex justify-between gap-5 f-full items-center"
         >
           <div>
             <a href="./"
               ><img
-                class="min-w-[7.443375rem] w-[7.443375rem]"
+                class=" w-[min(90%,7.443375rem)]"
                 src="assets/logo.png"
                 alt="Legistra"
             /></a>
+          </div>
+          <div class="flex">
+            <button id="menu-btn"><i aria-hidden="true" class="icon icon-burger-menu flex items-center"></i></button>
           </div>
           <ul role="navigation" class="hidden gap-8.75 text-lg pl-1.5 lg:flex">
             <li><a href="./" class="current">Home</a></li>
@@ -39,7 +42,7 @@
               ></a>
             </li>
           </ul>
-          <div class="flex gap-4 items-center">
+          <div class="hidden sm:flex gap-4 items-center">
             <a
               href="signin.html"
               class="py-3 px-6 text-dim border border-[#d9d9d9] rounded-4xl font-bold max-w-24 text-center text-base"
@@ -58,20 +61,27 @@
           <div
             class="inner pt-40 pb-32.5 min-h-80vh w-fit mx-auto flex flex-col gap-3.75"
           >
-            <div class="w-fit mx-auto">
+            <div class="hidden sm:block w-fit mx-auto">
               <p class="text-sm sm:text-lg h-min leading-4.5 text-dim">
                 Legal strategies for modern business needs.
               </p>
             </div>
             <div class="flex items-center justify-center w-fit mx-auto">
               <h1
-                class="text-4xl max-w-[17ch] sm:text-[clamp(1rem,4vw+1.6rem-0.24px,7rem)] leading-none sm:max-w-[17ch] mx-auto font-medium"
+                class="text-[clamp(1rem,8vw,2.5rem)] max-w-[20ch] sm:text-[clamp(1rem,4vw+1.6rem-0.24px,7rem)] leading-none sm:max-w-[17ch] mx-auto font-medium"
               >
                 Simplify Compliance. Minimize Risk. Empower Growth.
               </h1>
             </div>
+            <div class="sm:hidden w-fit mx-auto">
+              <p
+                class="text-[clamp(0.8rem,3vw,1rem)] max-w-[27ch] sm:text-lg h-min leading-4.5 text-dim"
+              >
+                Legal strategies for modern business needs.
+              </p>
+            </div>
             <div
-              class="carousel relative flex flex-col gap-2.5 mt-5.5 max-w-297.75 mx-auto text-white text-left md:flex-row"
+              class="carousel relative grid sm:grid-cols-2 gap-2.5 mt-5.5 max-w-297.75 mx-auto text-white text-left lg:flex lg:flex-row"
             >
               <div class="w-full img-wrapper">
                 <div class="h-fit rounded-[20px] overflow-hidden">
@@ -83,7 +93,9 @@
                 </div>
               </div>
               <div class="px-5 py-10 bg-accent rounded-[20px] bg-design w-full">
-                <p class="font-medium text-lg leading-6.75">
+                <p
+                  class="font-medium text-[0.95rem] sm:text-lg sm:w-[min(100%,17.1ch)] leading-6.75"
+                >
                   We help businesses navigate complex legal and regulatory
                   landscapes with clarity, confidence, and strategic insight.
                 </p>
@@ -98,12 +110,12 @@
                 </div>
               </div>
               <div
-                class="bg-accent font-medium text-lg w-full px-5 py-10 rounded-[1.25rem]"
+                class="bg-accent font-medium w-full px-5 py-10 rounded-[1.25rem]"
               >
                 <h2 class="text-[2rem] leading-[38.4px] mt-2 mb-[50px]">
                   Trusted by 120+
                 </h2>
-                <p>organizations across finance, healthcare, and tech.</p>
+                <p class="text-[0.95rem] sm:text-lg">organizations across finance, healthcare, and tech.</p>
               </div>
               <div class="review">
                 <img src="assets/Review.png" alt="review.png" />
@@ -113,26 +125,26 @@
         </section>
         <section id="about" class="flex min-h-[calc(100vh-2rem)]">
           <div class="inner flex flex-col gap-6 py-20 mx-auto">
-            <nav class="flex gap-3.75">
+            <nav class="sm:flex gap-3.75">
               <button
-                class="py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center text-[1.125rem] active hover:bg-accent hover:text-white"
+                class="py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center sm:text-[1.125rem] active hover:bg-accent hover:text-white"
               >
                 About Us
               </button>
               <button
-                class="py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center text-[1.125rem] hover:bg-accent hover:text-white"
+                class="hidden sm:block py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center text-[1.125rem] hover:bg-accent hover:text-white"
               >
                 Our Mission
               </button>
               <button
-                class="py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center text-[1.125rem] hover:bg-accent hover:text-white"
+                class="hidden sm:block py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center text-[1.125rem] hover:bg-accent hover:text-white"
               >
                 Our Journey
               </button>
             </nav>
             <div>
               <h2
-                class="text-[clamp(0.5rem,5vw+0.5rem,2.5rem)] leading-12 font-medium max-w-[89%]"
+                class="text-[clamp(0.5rem,5vw+0.25rem,2rem)]  sm:text-[clamp(0.5rem,5vw+0.5rem,2.5rem)] sm:leading-12 font-medium max-w-[89%]"
               >
                 At Legistra, we’re more than legal consultants—we’re your
                 strategic compliance allies. Since our founding in 2020, we’ve
@@ -145,19 +157,36 @@
                 >
               </h2>
             </div>
+                        <nav class="grid sm:flex gap-3.75">
+              <button
+                class="py-2.5 px-5 hidden bg-white text-dim rounded-4xl font-medium text-center sm:text-[1.125rem] active hover:bg-accent hover:text-white"
+              >
+                About Us
+              </button>
+              <button
+                class="py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center sm:text-[1.125rem] hover:bg-accent hover:text-white"
+              >
+                Our Mission
+              </button>
+              <button
+                class="py-2.5 px-5 bg-white text-dim rounded-4xl font-medium text-center sm:text-[1.125rem] hover:bg-accent hover:text-white"
+              >
+                Our Journey
+              </button>
+            </nav>
           </div>
         </section>
         <section id="services" class="min-h-screen">
-          <div class="inner py-20 text-center flex flex-col gap-2.5">
+          <div class="inner py-20 sm:text-center flex flex-col gap-2 sm:gap-2.5">
             <div class="mx-auto w-fit">
               <h2
-                class="mx-auto text-[clamp(1rem,4vw+1rem,4rem)] leading-normal sm:leading-16 tracking-normal font-normal w-[min(100%,17ch)]"
+                class="mx-auto text-[clamp(1rem,4vw+1rem,4rem)] leading-9 sm:leading-16 tracking-normal font-normal sm:w-[min(100%,17ch)]"
               >
                 Comprehensive Compliance. Strategic Legal Guidance.
               </h2>
             </div>
             <div class="w-fit mx-auto">
-              <p class="max-w-[50%] text-[1.125rem] text-dim mx-auto">
+              <p class="sm:max-w-[50%] text-[1.125rem] text-dim mx-auto">
                 We provide end-to-end legal and compliance consulting services
                 designed to reduce risk, enhance operational integrity
               </p>
@@ -175,7 +204,7 @@
                     Risk Assessment
                   </h3>
                   <p
-                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5 max-w-80"
+                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5"
                   >
                     Identify vulnerabilities before they become liabilities.We
                     conduct detailed assessments
@@ -194,18 +223,25 @@
                 </div>
               </article>
 
-              <article class="bg-accent text-white">
+              <article class="bg-accent text-white pb-10 sm:-mb-25">
                 <div>
-                  <img width="57" height="54" src="assets/document.png" alt="" />
+                  <img
+                    width="57"
+                    height="54"
+                    src="assets/document.png"
+                    alt=""
+                  />
                 </div>
                 <div>
                   <h3 class="text-[2rem] leading-[2.4rem] mt-8.75">
                     Regulatory Compliance (GDPR, HIPAA & More)
                   </h3>
                   <p
-                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5 max-w-80"
+                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5"
                   >
-                    Identify vulnerabilities before they become liabilities.We conduct detailed assessments across your operations to uncover compliance gaps
+                    Identify vulnerabilities before they become liabilities.We
+                    conduct detailed assessments across your operations to
+                    uncover compliance gaps
                   </p>
                 </div>
                 <div>
@@ -223,16 +259,23 @@
 
               <article class="bg-accent text-white">
                 <div>
-                  <img width="57" height="54" src="assets/building-office-2.png" alt="" />
+                  <img
+                    width="57"
+                    height="54"
+                    src="assets/building-office-2.png"
+                    alt=""
+                  />
                 </div>
                 <div>
                   <h3 class="text-[2rem] leading-[2.4rem] mt-8.75">
                     Corporate Governance
                   </h3>
                   <p
-                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5 max-w-80"
+                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5"
                   >
-                    Identify vulnerabilities before they become liabilities. We conduct detailed assessments across your operations to uncover compliance gaps
+                    Identify vulnerabilities before they become liabilities.We
+                    conduct detailed assessments across your operations to
+                    uncover compliance gaps
                   </p>
                 </div>
                 <div>
@@ -248,18 +291,24 @@
                 </div>
               </article>
 
-              <article class="bg-accent text-white">
+              <article class="bg-accent text-white sm:mt-25">
                 <div>
-                  <img width="57" height="54" src="assets/presentation-chart-line.png" alt="" />
+                  <img
+                    width="57"
+                    height="54"
+                    src="assets/presentation-chart-line.png"
+                    alt=""
+                  />
                 </div>
                 <div>
                   <h3 class="text-[2rem] leading-[2.4rem] mt-8.75">
                     Internal Audit Support
                   </h3>
                   <p
-                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5 max-w-80"
+                    class="text-[1.125rem] leading-6.75 font-normal mt-2.5 mb-12.5"
                   >
-                    Identify vulnerabilities before they become liabilities. We conduct detailed assessments
+                    Identify vulnerabilities before they become liabilities.We
+                    conduct detailed assessments
                   </p>
                 </div>
                 <div>
