@@ -9,9 +9,11 @@
   </head>
   <body class="font-base">
     <div id="page">
-      <header class="relative z-99 p-6 sm:px-10 lg:px-20 flex items-center">
+      <header
+        class="relative z-99 p-6 sm:py-0 sm:px-10 lg:px-20 flex items-center"
+      >
         <div
-          class="container mx-auto sm:py-8 flex justify-between gap-5 f-full items-center"
+          class="container mx-auto sm:py-8 flex justify-between gap-5 items-center"
         >
           <div>
             <a href="./"
@@ -21,7 +23,10 @@
                 alt="Legistra"
             /></a>
           </div>
-          <ul role="navigation" class="hidden gap-8.75 text-lg pl-1.5 lg:flex">
+          <ul
+            role="navigation"
+            class="hidden gap-8.75 text-lg pl-1.5 lg:flex mx-auto"
+          >
             <li><a href="./" class="current">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./services.html">Services</a></li>
@@ -62,10 +67,10 @@
           </div>
         </div>
       </header>
-      <main class="relative -top-30">
+      <main class="relative">
         <section id="cta" class="text-center gap-5 relative">
           <div
-            class="inner pt-40 pb-32.5 min-h-80vh w-fit mx-auto flex flex-col gap-3.75"
+            class="inner pt-10 pb-32.5 min-h-80vh w-fit mx-auto flex flex-col gap-3.75"
           >
             <div class="hidden sm:block w-fit mx-auto">
               <p class="text-sm sm:text-lg h-min leading-4.5 text-dim">
@@ -100,7 +105,7 @@
               </div>
               <div class="px-5 py-10 bg-accent rounded-[20px] bg-design w-full">
                 <p
-                  class="font-medium text-[0.95rem] sm:text-lg sm:w-[min(100%,17.1ch)] leading-6.75"
+                  class="font-medium text-[1.1rem] sm:text-lg sm:w-[min(100%,17.1ch)] leading-6.75"
                 >
                   We help businesses navigate complex legal and regulatory
                   landscapes with clarity, confidence, and strategic insight.
@@ -121,7 +126,7 @@
                 <h2 class="text-[2rem] leading-[38.4px] mt-2 mb-[50px]">
                   Trusted by 120+
                 </h2>
-                <p class="text-[0.95rem] sm:text-lg">
+                <p class="text-[1.1rem] sm:text-lg">
                   organizations across finance, healthcare, and tech.
                 </p>
               </div>
@@ -337,20 +342,23 @@
           </div>
         </section>
         <section id="sector">
-          <div class="inner py-20 flex flex-col gap-2 sm:gap-6.25">
-            <div class="flex justify-between gap-5">
-              <h3 class="text-[4rem] leading-16 w-[58%]">
+          <div class="inner py-20 flex flex-col gap-4 sm:gap-6.25">
+            <div class="flex flex-col sm:flex-row justify-between gap-2">
+              <h3 class="text-[3rem] sm:text-[4rem] leading-16 sm:w-[58%]">
                 Specialized Compliance for Every Sector
               </h3>
               <div>
                 <img src="assets/Icon-Brown.png" alt="review.png" />
               </div>
             </div>
-            <div id="finance" class="mt-7.5 flex flex-col sm:flex-row gap-7.5">
-              <div class="text-box p-8.75 bg-card-3">
+            <div
+              id="finance"
+              class="mt-7.5 flex flex-col sm:flex-row gap-4 sm:gap-7.5"
+            >
+              <div class="text-box p-8.75 bg-card-3 rounded-[1.25rem]">
                 <div class="flex flex-col gap-3.75">
                   <h3
-                    class="text-[40px] lg:text-5xl leading-[57.6px] mt-2 mb-25"
+                    class="text-4xl sm:text-[2.5rem] lg:text-5xl leading-[57.6px] sm:mt-2 mb-25"
                   >
                     Finance & Banking
                   </h3>
@@ -374,7 +382,7 @@
             </div>
             <div
               id="corporate"
-              class="flex gap-7.5 flex-col-reverse sm:flex-row"
+              class="flex gap-4 sm:gap-7.5 flex-col-reverse sm:flex-row"
             >
               <figure>
                 <div class="overflow-hidden rounded-[1.25rem]">
@@ -385,9 +393,11 @@
                   />
                 </div>
               </figure>
-              <div class="text-box p-8.75 bg-card-3">
+              <div class="text-box p-8.75 bg-card-3 rounded-[1.25rem]">
                 <div class="flex flex-col gap-3.75">
-                  <h3 class="text-5xl leading-[57.6px] mt-2 mb-25">
+                  <h3
+                    class="text-2xl text-[2.5rem] leading-[57.6px] mt-2 mb-25"
+                  >
                     Corporate & Enterprise
                   </h3>
                   <p class="text-[1.125rem] font-base text-dim">
@@ -401,15 +411,91 @@
             </div>
           </div>
         </section>
+        <section id="partners" class="min-h-125 flex items-center justify-center">
+          <div class="inner py-20 flex flex-col mdl:flex-row gap-10 mdl:gap-5 items-center mdl:text-left justify-between">
+            <div class="flex-1 flex flex-col gap-2.5 text-white justify-center ">
+              <h3
+                class="text-[3rem] leading-12 sm:max-w-[66%]md:max-w-[66%]"
+              >
+                Trusted Across Sectors
+              </h3>
+
+              <p class="text-[1.125rem]">
+                You’ll find our consultants working with:
+              </p>
+
+              <div class="mt-5  sm:block">
+                <a
+                  href="./"
+                  class="underline h-fit w-fit inline-block bg-white text-accent px-5 py-2.5 font-bold rounded-[1.875rem] font-base"
+                  ><span>Learn more</span>
+                  <i
+                    aria-hidden="true"
+                    class="bg-accent inline-block ml-1.25 p-2.5 text-[.625rem] rounded-full text-white rtmicon rtmicon-arrow-up-right"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <figure>
+              <img class="inline-block aspect-[auto_795/240]" height="240" src="assets/Group-7.png" alt="" />
+
+              
+            </figure>
+          </div>
+        </section>
+        <section id="team">
+        <div class="inner py-20">
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+            <h2 class="text-[clamp(1.9rem,2.95203vw+0.5rem,3.5rem)] md:max-w-[48%] leading-12">
+              Legal Minds. Compliance Strategists. Trusted Advisors.
+            </h2>
+            <p class="text-dim text-right text-[1.125rem] sm:max-w-[27%] self-end">
+              Behind every tailored compliance solution is a team of
+              professionals who know the law
+            </p>
+          </div>
+        </div>
+        </section>
+        <section id="test" class="min-h-125 flex flex-col">
+          <div
+            class="inner py-20 flex-1 flex flex-col gap-2.5 text-white justify-center"
+          >
+            <div>
+              <h3
+                class="text-[3rem] font-medium leading-12 sm:max-w-[60%] md:max-w-[45%]"
+              >
+                Test Your Compliance Health in Just 3 Minutes
+              </h3>
+            </div>
+            <div>
+              <p class="text-[1.125rem]">
+                Take our quick diagnostic to uncover hidden risks
+              </p>
+            </div>
+            <div class="mt-5">
+              <a
+                href="./"
+                class="underline h-fit w-fit inline-block bg-white text-accent px-5 py-2.5 font-bold rounded-[1.875rem] font-base"
+                ><span>Start The Free Compliance Check</span>
+                <i
+                  aria-hidden="true"
+                  class="bg-accent inline-block ml-1.25 p-2.5 text-[.625rem] rounded-full text-white rtmicon rtmicon-arrow-up-right"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer id="footer">
-        <div class="inner flex flex-col gap-7.5 py-20 lg:px-[clamp(1rem,4vw,3rem)] text-[.95rem]  sm:text-base">
+      <footer id="footer" class="relative">
+        <div
+          class="inner flex flex-col gap-7.5 py-20 lg:px-[clamp(1rem,4vw,3rem)] xl:px-0 text-[.95rem] sm:text-base"
+        >
           <div class="mdl:flex justify-between lg:gap-31.25 mb-7.5">
             <div class="flex flex-col gap-7.5 flex-1">
               <div>
                 <a href="index.html"
                   ><img
-                    class="w-[max(7rem,19.9%)] inline-block align-middle"
+                    class="w-[max(6rem,19.9%)] inline-block align-middle"
                     width="246"
                     height="59"
                     src="assets/Logo-Black.png"
@@ -417,7 +503,9 @@
                 /></a>
               </div>
               <div>
-                <p class="font-base leading-6 text-dim max-w-[60ch]  mdl:w-[max(30ch,55%)]">
+                <p
+                  class="font-base leading-6 text-dim max-w-[60ch] mdl:w-[max(30ch,55%)]"
+                >
                   We are proud to offer a wide ranges of templates for websites,
                   all designed to help you achieve your goals.
                 </p>
@@ -427,7 +515,7 @@
                   class="p-2 pl-4.5 border-[.0469rem] border-lightdim rounded-4xl shadow-grey"
                 >
                   <form action="index.html">
-                    <div class="flex">
+                    <div class="flex items-center">
                       <input
                         class="placeholder:text-dim search-input leading-6 w-full"
                         type="text"
@@ -437,7 +525,10 @@
                         placeholder="Search ... "
                       />
                       <div>
-                        <button class="p-2.5 search-btn" type="submit">
+                        <button
+                          class="p-2.5 flex items-center search-btn"
+                          type="submit"
+                        >
                           <i
                             aria-hidden="true"
                             class="icon search-icon text-[1.5rem]"
@@ -491,14 +582,16 @@
             <p class="max-w-[18ch] sm:max-w-[initial]">
               Copyright &copy; 2025 Legistra - Legal & Compliance Consulting
             </p>
-            <ul class=" flex flex-col gap-2 sm:flex-row justify-end items-start">
-              <li class="mx-5 flex items-center">
+            <ul
+              class="flex flex-col gap-1 sm:flex-row items-end sm:items-start"
+            >
+              <li class="sm:mx-5 flex items-center">
                 <span>Terms of Service </span>
               </li>
-              <li class="mx-5 flex items-center">
+              <li class="sm:mx-5 flex items-center">
                 <span>API </span>
               </li>
-              <li class="ml-5 flex items-center">
+              <li class="sm:ml-5 flex items-center">
                 <span>Data Processing Agreement</span>
               </li>
             </ul>

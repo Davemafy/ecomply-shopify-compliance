@@ -70,6 +70,29 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "rtmicon-regular";
+  src: url("./assets/rtmicon-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.rtmicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "rtmicon-regular" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @theme {
   --color-dim: #575757; /* Tomato */
   --color-seal: #00cea6;
@@ -81,8 +104,7 @@
   --font-accent: "Bricolage Thin";
   --shadow-grey: 0px 4px 12px 0px
     rgba(13.000000000000023, 10.000000000000002, 44, 0.058823529411764705);
-    --breakpoint-mdl: 62rem;
-
+  --breakpoint-mdl: 62rem;
 }
 
 *,
@@ -117,6 +139,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.rtmicon.rtmicon-arrow-up-right:before {
+  content: "\e923";
+  font-size: 0.625rem;
+}
+
 .icon.icon-burger-menu::before {
   content: "\eab8";
   font-size: min(9vw, 2rem);
@@ -125,7 +152,7 @@ body {
 
 .search-icon::before {
   content: "\eb28";
- 
+
   color: var(--color-dim);
 }
 .search-btn:hover .search-icon::before {
@@ -188,7 +215,7 @@ main h2 {
 
 #about {
   background-color: #f5f6f7;
-  background-image: url(https://kit.createbigsupply.com/legistra/wp-content/uploads/sites/64/2025/07/BG-About.png);
+  background-image: url("assets/BG-About.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -198,6 +225,14 @@ main h2 {
   background-image: url("./assets/Vector-3.png");
   /* background-color: #fac5c5; */
   background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#test {
+  background-color: var(--color-accent);
+  background-image: url("assets/BG-CTA2.png");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -232,11 +267,17 @@ button.active {
 .bg-card-3 {
   background-color: rgb(245, 246, 247);
   background-image: url("./assets/Bg-Card-3.png");
-  padding: 35px 35px 35px 35px;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 20px 20px 20px 20px;
+}
+
+#partners {
+  background-color: var(--color-accent);
+  background-image: url("assets/BG-CTA-3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #finance .text-box,
