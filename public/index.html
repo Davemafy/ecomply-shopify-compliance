@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="output.css" />
     <title>Legistra</title>
   </head>
-  <body class="font-base h-[200vh]">
+  <body class="font-base">
     <div id="page">
       <header class="relative z-99 p-6 sm:px-10 lg:px-20 flex items-center">
         <div
@@ -43,7 +43,7 @@
           <div class="hidden ml-auto sm:flex gap-4 items-center">
             <a
               href="signin.html"
-              class="py-3 px-6 text-dim border border-[#d9d9d9] rounded-4xl font-bold text-center text-base"
+              class="py-3 px-6 text-dim border border-lightdim rounded-4xl font-bold text-center text-base"
               >Sign up</a
             >
             <a
@@ -336,7 +336,7 @@
             </div>
           </div>
         </section>
-        <section id="sector" class="min-h-screen">
+        <section id="sector">
           <div class="inner py-20 flex flex-col gap-2 sm:gap-6.25">
             <div class="flex justify-between gap-5">
               <h3 class="text-[4rem] leading-16 w-[58%]">
@@ -402,6 +402,109 @@
           </div>
         </section>
       </main>
+      <footer id="footer">
+        <div class="inner flex flex-col gap-7.5 py-20 lg:px-[clamp(1rem,4vw,3rem)] text-[.95rem]  sm:text-base">
+          <div class="mdl:flex justify-between lg:gap-31.25 mb-7.5">
+            <div class="flex flex-col gap-7.5 flex-1">
+              <div>
+                <a href="index.html"
+                  ><img
+                    class="w-[max(7rem,19.9%)] inline-block align-middle"
+                    width="246"
+                    height="59"
+                    src="assets/Logo-Black.png"
+                    alt="logo black"
+                /></a>
+              </div>
+              <div>
+                <p class="font-base leading-6 text-dim max-w-[60ch]  mdl:w-[max(30ch,55%)]">
+                  We are proud to offer a wide ranges of templates for websites,
+                  all designed to help you achieve your goals.
+                </p>
+              </div>
+              <div class="mdl:w-3/5 min-w-16">
+                <div
+                  class="p-2 pl-4.5 border-[.0469rem] border-lightdim rounded-4xl shadow-grey"
+                >
+                  <form action="index.html">
+                    <div class="flex">
+                      <input
+                        class="placeholder:text-dim search-input leading-6 w-full"
+                        type="text"
+                        name="s"
+                        id="s"
+                        autocomplete="on"
+                        placeholder="Search ... "
+                      />
+                      <div>
+                        <button class="p-2.5 search-btn" type="submit">
+                          <i
+                            aria-hidden="true"
+                            class="icon search-icon text-[1.5rem]"
+                          ></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 mt-20.5 mdl:mt-0 grid grid-flow-row grid-cols-3 grid-rows-1 mdl:gap-28.75"
+            >
+              <div class="flex flex-col gap-5">
+                <h3 class="leading-4">Product</h3>
+                <ul class="text-dim">
+                  <li class="pb-2.5">Features</li>
+                  <li class="mt-2.5 pb-2.5">Integrations</li>
+                  <li class="mt-2.5 pb-2.5">Pricing</li>
+                  <li class="mt-2.5 pb-2.5">Changelog</li>
+                  <li class="mt-2.5 pb-2.5">Documentation</li>
+                  <li class="mt-2.5 pb-2.5">Download</li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="leading-4">Company</h3>
+                <ul class="text-dim">
+                  <li class="pb-2.5">About Us</li>
+                  <li class="mt-2.5 pb-2.5">Blog</li>
+                  <li class="mt-2.5 pb-2.5">Careers</li>
+                  <li class="mt-2.5 pb-2.5">Customers</li>
+                  <li class="mt-2.5 pb-2.5">Brand Assets</li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="leading-4">Resources</h3>
+                <ul class="text-dim">
+                  <li class="pb-2.5">Community</li>
+                  <li class="mt-2.5 pb-2.5">Contact</li>
+                  <li class="mt-2.5 pb-2.5">System Status</li>
+                  <li class="mt-2.5 pb-2.5">Terms of Service</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <span class="border-t border-lightdim block"></span>
+          </div>
+          <div class="flex justify-between gap-5 text-dim">
+            <p class="max-w-[18ch] sm:max-w-[initial]">
+              Copyright &copy; 2025 Legistra - Legal & Compliance Consulting
+            </p>
+            <ul class=" flex flex-col gap-2 sm:flex-row justify-end items-start">
+              <li class="mx-5 flex items-center">
+                <span>Terms of Service </span>
+              </li>
+              <li class="mx-5 flex items-center">
+                <span>API </span>
+              </li>
+              <li class="ml-5 flex items-center">
+                <span>Data Processing Agreement</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

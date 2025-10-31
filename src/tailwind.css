@@ -69,6 +69,42 @@
   font-style: normal;
   font-display: swap;
 }
+
+@theme {
+  --color-dim: #575757; /* Tomato */
+  --color-seal: #00cea6;
+  --color-lightdim: #d9d9d9;
+  --color-accent: #af8600;
+  --color-custom-green-light: #90ee90;
+  --color-custom-green-dark: #228b22;
+  --font-base: "Bricolage Grotesque";
+  --font-accent: "Bricolage Thin";
+  --shadow-grey: 0px 4px 12px 0px
+    rgba(13.000000000000023, 10.000000000000002, 44, 0.058823529411764705);
+    --breakpoint-mdl: 62rem;
+
+}
+
+*,
+*::before,
+*::after {
+  outline: solid 0px black;
+}
+
+body {
+  background-color: #fff;
+  color: hsl(0, 0%, 0%);
+  font-family: var(--font-base), -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .icon::before {
   font-family: elementskit !important;
   speak: none;
@@ -87,20 +123,13 @@
   color: var(--color-accent);
 }
 
-@theme {
-  --color-dim: #575757; /* Tomato */
-  --color-seal: #00cea6;
-  --color-accent: #af8600;
-  --color-custom-green-light: #90ee90;
-  --color-custom-green-dark: #228b22;
-  --font-base: "Bricolage Grotesque";
-  --font-accent: "Bricolage Thin";
+.search-icon::before {
+  content: "\eb28";
+ 
+  color: var(--color-dim);
 }
-
-*,
-*::before,
-*::after {
-  outline: solid 0px black;
+.search-btn:hover .search-icon::before {
+  color: var(--color-accent);
 }
 
 #cta {
@@ -109,21 +138,7 @@
   background-size: 140%;
 }
 
-body {
-  background-color: #fff;
-  color: hsl(0, 0%, 0%);
-  font-family: var(--font-base), -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h2 {
+main h2 {
   margin-block-end: 1rem;
   margin-block-start: 0.5rem;
 }
@@ -224,7 +239,7 @@ button.active {
   border-radius: 20px 20px 20px 20px;
 }
 
-#finance .text-box ,
+#finance .text-box,
 #corporate .text-box {
   flex: 1;
 }
@@ -232,4 +247,8 @@ button.active {
 #finance figure,
 #corporate figure {
   flex: 0.5875;
+}
+
+#footer :is(li):hover {
+  color: var(--color-accent);
 }
