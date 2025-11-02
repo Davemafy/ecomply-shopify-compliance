@@ -215,6 +215,9 @@
       max-width: 96rem;
     }
   }
+  .-mx-4 {
+    margin-inline: calc(var(--spacing) * -4);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -257,14 +260,14 @@
   .mb-7\.5 {
     margin-bottom: calc(var(--spacing) * 7.5);
   }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
   .mb-12\.5 {
     margin-bottom: calc(var(--spacing) * 12.5);
-  }
-  .mb-25 {
-    margin-bottom: calc(var(--spacing) * 25);
   }
   .mb-\[50px\] {
     margin-bottom: 50px;
@@ -290,9 +293,6 @@
   .hidden {
     display: none;
   }
-  .inline {
-    display: inline;
-  }
   .inline-block {
     display: inline-block;
   }
@@ -302,21 +302,11 @@
   .table {
     display: table;
   }
-  .aspect-\[auto795\/240\] {
-    aspect-ratio: auto795/240;
-  }
   .aspect-\[auto_795\/240\] {
     aspect-ratio: auto 795/240;
   }
-  .aspect-auto {
-    aspect-ratio: auto;
-  }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
-  }
-  .size-full {
-    width: 100%;
-    height: 100%;
   }
   .h-fit {
     height: fit-content;
@@ -327,9 +317,6 @@
   .h-min {
     height: min-content;
   }
-  .min-h-12 {
-    min-height: calc(var(--spacing) * 12);
-  }
   .min-h-125 {
     min-height: calc(var(--spacing) * 125);
   }
@@ -338,9 +325,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-79 {
-    width: calc(var(--spacing) * 79);
   }
   .w-\[max\(6rem\,19\.9\%\)\] {
     width: max(6rem, 19.9%);
@@ -360,11 +344,11 @@
   .max-w-297\.75 {
     max-width: calc(var(--spacing) * 297.75);
   }
-  .max-w-\[18ch\] {
-    max-width: 18ch;
-  }
   .max-w-\[20ch\] {
     max-width: 20ch;
+  }
+  .max-w-\[25ch\] {
+    max-width: 25ch;
   }
   .max-w-\[27ch\] {
     max-width: 27ch;
@@ -396,8 +380,8 @@
   .grid-flow-row {
     grid-auto-flow: row;
   }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .grid-rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -413,9 +397,6 @@
   }
   .flex-wrap {
     flex-wrap: wrap;
-  }
-  .items-baseline-last {
-    align-items: last baseline;
   }
   .items-center {
     align-items: center;
@@ -471,6 +452,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
   .self-end {
     align-self: flex-end;
   }
@@ -519,26 +503,23 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-center {
+    object-position: center;
+  }
+  .object-top {
+    object-position: top;
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
   }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
-  .p-8\.75 {
-    padding: calc(var(--spacing) * 8.75);
-  }
-  .p-30 {
-    padding: calc(var(--spacing) * 30);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
@@ -566,6 +547,12 @@
   }
   .py-3\.75 {
     padding-block: calc(var(--spacing) * 3.75);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-8\.75 {
+    padding-block: calc(var(--spacing) * 8.75);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
@@ -641,20 +628,38 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-\[\.95rem\] {
-    font-size: .95rem;
+  .text-\[\.9rem\] {
+    font-size: .9rem;
   }
   .text-\[\.625rem\] {
     font-size: .625rem;
   }
-  .text-\[1\.1rem\] {
-    font-size: 1.1rem;
+  .text-\[0\.5rem\] {
+    font-size: 0.5rem;
+  }
+  .text-\[0\.8rem\] {
+    font-size: 0.8rem;
+  }
+  .text-\[0\.9rem\] {
+    font-size: 0.9rem;
+  }
+  .text-\[0\.85rem\] {
+    font-size: 0.85rem;
+  }
+  .text-\[0\.95rem\] {
+    font-size: 0.95rem;
+  }
+  .text-\[1\.4rem\] {
+    font-size: 1.4rem;
   }
   .text-\[1\.5rem\] {
     font-size: 1.5rem;
   }
   .text-\[1\.125rem\] {
     font-size: 1.125rem;
+  }
+  .text-\[1rem\] {
+    font-size: 1rem;
   }
   .text-\[2\.5rem\] {
     font-size: 2.5rem;
@@ -665,107 +670,20 @@
   .text-\[3rem\] {
     font-size: 3rem;
   }
-  .text-\[clamp\(\)\] {
-    font-size: clamp();
-  }
   .text-\[clamp\(0\.5rem\,5vw\+0\.25rem\,2rem\)\] {
     font-size: clamp(0.5rem, 5vw + 0.25rem, 2rem);
   }
   .text-\[clamp\(0\.8rem\,3vw\,1rem\)\] {
     font-size: clamp(0.8rem, 3vw, 1rem);
   }
-  .text-\[clamp\(1\.5rem\,2\.95203vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1.5rem, 2.95203vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1\.8rem\,2\.95203vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1.8rem, 2.95203vw + 0.5rem, 3.5rem);
+  .text-\[clamp\(1\.5rem\,8vw\,2\.5rem\)\] {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
   }
   .text-\[clamp\(1\.9rem\,2\.95203vw\+0\.5rem\,3\.5rem\)\] {
     font-size: clamp(1.9rem, 2.95203vw + 0.5rem, 3.5rem);
   }
-  .text-\[clamp\(1rem\,2\.8vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.8vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.94vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.94vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.95vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.95vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.96vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.96vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.97\=6vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.97=6vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.97vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.97vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.98vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.98vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.952vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.952vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.953vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.953vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.954vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.954vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.955vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.955vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9520vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9520vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9521vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9521vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9522vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9522vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9523vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9523vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9524vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9524vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9525vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9525vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9528vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9528vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.9529vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.9529vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.95203vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.95203vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.95205vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.95205vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.95208vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.95208vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,2\.vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 2.vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,3vw\+0\.5rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 3vw + 0.5rem, 3.5rem);
-  }
-  .text-\[clamp\(1rem\,3vw\+1rem\,3\.5rem\)\] {
-    font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
-  }
   .text-\[clamp\(1rem\,4vw\+1rem\,4rem\)\] {
     font-size: clamp(1rem, 4vw + 1rem, 4rem);
-  }
-  .text-\[clamp\(1rem\,8vw\,2\.5rem\)\] {
-    font-size: clamp(1rem, 8vw, 2.5rem);
   }
   .leading-4 {
     --tw-leading: calc(var(--spacing) * 4);
@@ -791,33 +709,13 @@
     --tw-leading: calc(var(--spacing) * 12);
     line-height: calc(var(--spacing) * 12);
   }
-  .leading-16 {
-    --tw-leading: calc(var(--spacing) * 16);
-    line-height: calc(var(--spacing) * 16);
-  }
   .leading-\[2\.4rem\] {
     --tw-leading: 2.4rem;
     line-height: 2.4rem;
   }
-  .leading-\[3rem\] {
-    --tw-leading: 3rem;
-    line-height: 3rem;
-  }
-  .leading-\[4\] {
-    --tw-leading: 4;
-    line-height: 4;
-  }
   .leading-\[38\.4px\] {
     --tw-leading: 38.4px;
     line-height: 38.4px;
-  }
-  .leading-\[48px\] {
-    --tw-leading: 48px;
-    line-height: 48px;
-  }
-  .leading-\[57\.6px\] {
-    --tw-leading: 57.6px;
-    line-height: 57.6px;
   }
   .leading-none {
     --tw-leading: 1;
@@ -839,11 +737,8 @@
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
   }
-  .text-\[clamo\] {
-    color: clamo;
-  }
-  .text-\[clamp\] {
-    color: clamp;
+  .text-\[rem\] {
+    color: rem;
   }
   .text-accent {
     color: var(--color-accent);
@@ -910,6 +805,11 @@
       }
     }
   }
+  .sm\:mx-0 {
+    @media (width >= 40rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .sm\:mx-5 {
     @media (width >= 40rem) {
       margin-inline: calc(var(--spacing) * 5);
@@ -925,9 +825,9 @@
       margin-top: calc(var(--spacing) * 25);
     }
   }
-  .sm\:-mb-25 {
+  .sm\:mb-25 {
     @media (width >= 40rem) {
-      margin-bottom: calc(var(--spacing) * -25);
+      margin-bottom: calc(var(--spacing) * 25);
     }
   }
   .sm\:ml-5 {
@@ -948,6 +848,11 @@
   .sm\:hidden {
     @media (width >= 40rem) {
       display: none;
+    }
+  }
+  .sm\:inline-block {
+    @media (width >= 40rem) {
+      display: inline-block;
     }
   }
   .sm\:w-\[58\%\] {
@@ -985,11 +890,6 @@
       max-width: 60%;
     }
   }
-  .sm\:max-w-\[66\%\] {
-    @media (width >= 40rem) {
-      max-width: 66%;
-    }
-  }
   .sm\:max-w-\[initial\] {
     @media (width >= 40rem) {
       max-width: initial;
@@ -998,6 +898,11 @@
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .sm\:grid-cols-3 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .sm\:flex-row {
@@ -1023,6 +928,16 @@
   .sm\:gap-7\.5 {
     @media (width >= 40rem) {
       gap: calc(var(--spacing) * 7.5);
+    }
+  }
+  .sm\:rounded-\[1\.25rem\] {
+    @media (width >= 40rem) {
+      border-radius: 1.25rem;
+    }
+  }
+  .sm\:p-8\.75 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 8.75);
     }
   }
   .sm\:px-10 {
@@ -1067,6 +982,16 @@
       font-size: 2.5rem;
     }
   }
+  .sm\:text-\[2rem\] {
+    @media (width >= 40rem) {
+      font-size: 2rem;
+    }
+  }
+  .sm\:text-\[3rem\] {
+    @media (width >= 40rem) {
+      font-size: 3rem;
+    }
+  }
   .sm\:text-\[4rem\] {
     @media (width >= 40rem) {
       font-size: 4rem;
@@ -1094,14 +1019,15 @@
       line-height: calc(var(--spacing) * 16);
     }
   }
-  .sm\:text-\[initial\] {
+  .sm\:leading-\[57\.6px\] {
     @media (width >= 40rem) {
-      color: initial;
+      --tw-leading: 57.6px;
+      line-height: 57.6px;
     }
   }
-  .sm\:text-\[left\] {
+  .sm\:underline {
     @media (width >= 40rem) {
-      color: left;
+      text-decoration-line: underline;
     }
   }
   .md\:flex {
@@ -1117,16 +1043,6 @@
   .md\:max-w-\[48\%\] {
     @media (width >= 48rem) {
       max-width: 48%;
-    }
-  }
-  .md\:max-w-\[66\%\] {
-    @media (width >= 48rem) {
-      max-width: 66%;
-    }
-  }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
     }
   }
   .md\:text-right {
@@ -1424,6 +1340,12 @@ button.active {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+@media (width <= 40rem) {
+  .bg-card-3 {
+    background-position: right center;
+    background-size: cover;
+  }
 }
 #partners {
   background-color: var(--color-accent);

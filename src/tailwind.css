@@ -272,6 +272,14 @@ button.active {
   background-size: contain;
 }
 
+@media (width <= 40rem) {
+  .bg-card-3 {
+  background-position: right center;
+
+    background-size: cover;
+  }
+}
+
 #partners {
   background-color: var(--color-accent);
   background-image: url("assets/BG-CTA-3.png");
